@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  color: #25283b;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  gap: 15px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #777;
+}
+
+#status {
+  background: #e8e9ef;
+  color: #555;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+#status.online {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card,
+.grafico,
+.historico {
+  background: white;
+  border: 1px solid #e9e9ef;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.card p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 32px;
+  color: #6554c0;
+}
+
+.graficos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.grafico {
+  min-width: 0;
+}
+
+.grafico h3,
+.historico h3 {
+  margin-bottom: 20px;
+}
+
+.grafico canvas {
+  width: 100% !important;
+  max-height: 280px;
+}
+
+.historico {
+  margin-bottom: 30px;
+}
+
+.tabela-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+th {
+  color: #666;
+  background: #fafafa;
+}
+
+@media (max-width: 768px) {
+  .indicadores,
+  .graficos {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.filtro-indicadores {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filtro-indicadores button {
+  padding: 11px 18px;
+  border: 1px solid #e5e5ef;
+  border-radius: 8px;
+  background: white;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filtro-indicadores button:hover {
+  border-color: #6554c0;
+  color: #6554c0;
+}
+
+.filtro-indicadores button.ativo {
+  background: #6554c0;
+  border-color: #6554c0;
+  color: white;
+}
+
+#btnAtualizar {
+  margin-left: auto;
+  background: #f3f0ff;
+  color: #6554c0;
+  border: 1px solid #dcd5ff;
+  font-weight: 500;
+}
+
+#btnAtualizar:hover {
+  background: #e8e1ff;
+}
+
+#btnAtualizar:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}

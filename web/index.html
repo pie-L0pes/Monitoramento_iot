@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monitoramento Ambiental</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <div>
+                <h1>Monitoramento Ambiental</h1>
+                <p>Dados coletados pelo ESP32</p>
+            </div>
+
+            <span id="status">Aguardando dados</span>
+        </header>
+        <div class="filtro-indicadores">
+            <button id="btnUltima" class="ativo" type="button">
+                Última medição
+            </button>
+
+            <button id="btnMedia" type="button">
+                Média das medições
+            </button>
+
+            <button id="btnAtualizar" type="button">
+                ↻ Atualizar dados
+            </button>
+        </div>
+
+        <section class="indicadores">
+
+            <div class="card">
+                <p>Temperatura</p>
+                <h2 id="temperatura">-- °C</h2>
+            </div>
+
+            <div class="card">
+                <p>Umidade</p>
+                <h2 id="umidade">-- %</h2>
+            </div>
+
+            <div class="card">
+                <p>Luminosidade</p>
+                <h2 id="luminosidade">--</h2>
+            </div>
+
+        </section>
+
+        <section class="graficos">
+
+            <div class="grafico">
+                <h3>Temperatura</h3>
+                <canvas id="graficoTemperatura"></canvas>
+            </div>
+
+            <div class="grafico">
+                <h3>Umidade</h3>
+                <canvas id="graficoUmidade"></canvas>
+            </div>
+
+            <div class="grafico">
+                <h3>Luminosidade</h3>
+                <canvas id="graficoLuminosidade"></canvas>
+            </div>
+
+        </section>
+
+        <section class="historico">
+            <h3>Histórico de medições</h3>
+
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Temperatura</th>
+                            <th>Umidade</th>
+                            <th>Luminosidade</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelaMedicoes"></tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
