@@ -222,7 +222,7 @@ npm install
 Criar um arquivo `.env`:
 
 ```env
-DATABASE_URL="mysql://USUARIO:SENHA@localhost:3306/NOME_DO_BANCO"
+DATABASE_URL="mysql://root@localhost:3306/NOME_DO_BANCO"
 ```
 
 ### Preparar o Prisma
