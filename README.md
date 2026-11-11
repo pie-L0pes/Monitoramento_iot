@@ -270,10 +270,15 @@ A integração entre ESP32, API REST, MySQL e dashboard possibilita o monitorame
 ## 👩‍💻 Autoria
 
 **Pietra Vitória Fernandes Lopes**
+
 **Luiza Amaral Corazin**
+
 **Giovana Corrêa**
+
 **Clara Antonacci**
+
 **Julia Novo**
+
 **Beatriz Albuquerque**
 
 Curso Técnico em Análise e Desenvolvimento de Sistemas — SENAI."# Monitoramento_iot" 
